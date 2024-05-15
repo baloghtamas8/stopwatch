@@ -1,0 +1,22 @@
+$success: #dba507;
+$primary: #8ec7d2;
+$secondary: #07485b;
+
+.content-container {
+    padding: 76px 0 76px 0;
+}
+.time {
+    font-size: 3.45em;
+    font-family: monospace;
+    color: white;
+}
+.laps-list {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    max-height: 200px;
+    overflow: auto;
+    font-family: monospace;
+}
+
+/* import bootstrap to set changes */
+@import "~bootstrap/scss/bootstrap";
