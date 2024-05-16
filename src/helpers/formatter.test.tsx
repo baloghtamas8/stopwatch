@@ -1,7 +1,7 @@
 import formatTime from "./formatter";
 
-describe("Formatter", () => {
-    it("formatTime", () => {
+describe("formatTime", () => {
+    it("should format a millisecond time number into readable string format", () => {
         expect(formatTime(0)).toBe("00:00.00");
         expect(formatTime(100)).toBe("00:00.10");
         expect(formatTime(200)).toBe("00:00.20");
