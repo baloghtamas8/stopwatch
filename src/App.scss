@@ -1,6 +1,8 @@
 $success: #dba507;
 $primary: #8ec7d2;
 $secondary: #07485b;
+$gray: #c0c0c0;
+$lightgray: #ebebeb;
 
 .content-container {
     padding: 76px 0 76px 0;
@@ -11,12 +13,61 @@ $secondary: #07485b;
     color: white;
 }
 .laps-list {
-    margin-top: 10px;
-    margin-bottom: 10px;
-    max-height: 200px;
+    margin: 10px 0 10px 0;
+    max-height: 206px;
     overflow: auto;
     font-family: monospace;
 }
+.clock-container {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    margin: 10px auto;
 
+    .clock-face {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        border: 7px solid $gray;
+
+        .clock-hands {
+            position: relative;
+
+            .hand {
+                position: absolute;
+                transform-origin: bottom center;
+                border-radius: 2px;
+            }
+
+            .sec-hand {
+                @extend .hand;
+                width: 2px;
+                height: 50%;
+                background-color: $success;
+            }
+
+            .min-hand {
+                @extend .hand;
+                width: 3px;
+                height: 48%;
+                top: 2%;
+                background-color: $lightgray;
+            }
+
+            .hour-hand {
+                @extend .hand;
+                width: 3.6px;
+                height: 40%;
+                top: 10%;
+                background-color: white;
+            }
+        }
+    }
+}
 /* import bootstrap to set changes */
 @import "~bootstrap/scss/bootstrap";

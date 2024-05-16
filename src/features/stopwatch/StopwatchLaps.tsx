@@ -1,6 +1,6 @@
 import ListGroup from "react-bootstrap/ListGroup";
 import Button from "react-bootstrap/Button";
-import formatTime from "../../helpers/formatter";
+import { formatTime } from "../../helpers/formatter";
 import React from "react";
 
 const StopwatchLaps = ({
