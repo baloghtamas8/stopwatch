@@ -30,12 +30,9 @@ const useStopwatch = (): {
     }, [elapsedTime]);
 
     useEffect(() => {
-        // calculate and store the start time whenever there is a fresh elapsedTime
-        startTimeRef.current = Date.now() - elapsedTime;
-    }, [isRunning, elapsedTime]);
-
-    useEffect(() => {
         if (isRunning) {
+            // calculate start time whenever start the clock
+            startTimeRef.current = Date.now() - elapsedTimeRef.current;
             intervalRef.current = setInterval(() => {
                 //calculate elapsed time in every 10s millisecond
                 setElapsedTime(Date.now() - startTimeRef.current!);
